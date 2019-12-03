@@ -34,7 +34,7 @@ class Yolo():
 			Break = False
 			imgFile = open("socketImage.jpg", 'wb')
 			while True:
-				#print("waiting for incoming image...")
+				# print("waiting for incoming image...")
 				imgData = client.recv(1024)
 				imgFile.write(imgData)
 				if imgData[-4:] == b'over':
@@ -45,7 +45,6 @@ class Yolo():
 
 			imgFile.close()
 			print("image save")
-			time.sleep(0.2)
 
 			if Break:
 				break
